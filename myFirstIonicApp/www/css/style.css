@@ -1,1 +1,15 @@
 /* Empty. Add your own CSS if you like */
+.gallery {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.wide-as-needed {
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+}

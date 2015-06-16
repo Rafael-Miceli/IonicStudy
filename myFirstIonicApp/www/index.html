@@ -28,13 +28,47 @@
       <ion-header-bar class="bar-stable">
         <h1 class="title">Ionic Image Study Starter</h1>
       </ion-header-bar>
-      <ion-content ng-controller="imageController" ng-init="loadImages()">
-                <div class="row responsive-md">
-                    <div class="col col-25" ng-repeat="image in images">
-                        <img ng-src="{{image.src}}" width="25%" />
-                    </div>
-                </div>
-            </ion-content>
+      
+      <ion-content ng-controller="imageController" ng-init="loadLockers()">
+          
+          
+          <ion-scroll direction="x" class="wide-as-needed">
+              <table>
+                <tr ng-repeat="rows in tableLockers">
+                  <td  ng-repeat="locker in rows">
+                    <a class="button" ng-click="alugandoLocker(locker.id)">
+                        id {{locker.id}}
+                        <br />
+                        Linha {{locker.row}}
+                        <br />
+                        Coluna {{locker.col}}
+                      </a>
+                  </td>
+                </tr>
+              </table>              
+              <!--<div ng-repeat="rows in tableLockers">             
+                                    
+                  <div ng-repeat="locker in rows">
+                      <a class="button">
+                        id {{locker.id}}
+                        <br />
+                        Linha {{locker.row}}
+                        <br />
+                        Coluna {{locker.col}}
+                        <br />
+                        {{locker.nome}}
+                        <br />
+                      </a>  
+                  </div>
+                  
+                    
+              </div>              -->
+          </ion-scroll>
+                
+                
+                
+                
+      </ion-content>
     </ion-pane>
   </body>
 </html>
